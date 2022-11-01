@@ -1,0 +1,8 @@
+{{#if resume.languages}}
+    <h4 class='mt-5'>Languages</h4>
+    <p>
+    {{#each resume.languages}}
+        {{#unless @first }}, {{/unless}}<b>{{language}}</b> ({{fluency}})
+    {{/each}}
+    </p>
+{{/if}}

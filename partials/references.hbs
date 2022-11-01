@@ -1,0 +1,15 @@
+{{#if resume.references }}
+<div class='block'>
+    <h2><i class="fa-regular fa-thumbs-up"></i> References</h2>
+    {{#each resume.references}}
+    <div class='item'>
+        <h3 class='icon-right-open-mini'>
+            <i class="fa-solid fa-chevron-right fa-sm"></i>
+            <em>{{name}}</em>
+        </h3>
+        <h4>{{role}}</h4>
+        <p>{{{reference}}}</p>
+    </div>
+    {{/each}}
+</div>
+{{/if}}

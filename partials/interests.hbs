@@ -1,0 +1,9 @@
+{{#if resume.interests}}
+    <h4 class='mt-5'>Interests</h4>
+    <p>
+    {{#each resume.interests}}
+        {{!-- {{#if name }}<h6 style='font-weight: bold'>{{name}}</h6>{{/if}} --}}
+        <b>{{name}}:</b> {{#each keywords}}{{#unless @first }}, {{/unless}}{{.}}{{/each}}
+    {{/each}}
+    </p>
+{{/if}}

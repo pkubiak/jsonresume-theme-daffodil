@@ -1,0 +1,26 @@
+{{#if resume.education }}
+<div class='block'>
+    <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+    {{#each resume.education}}
+    <div class='item'>
+        <h3 class='icon-right-open-mini'>
+            <i class="fa-solid fa-chevron-right fa-sm"></i>
+            <em>{{institution}}</em>
+            <span>{{ dateFormat "MMM YYYY" startDate }} – {{ dateFormat "MMM YYYY" endDate }}</span>
+        </h3>
+        <h4>
+            {{studyType}}<i class='slash'></i>{{area}}
+        </h4>
+        {{#if courses}}
+        <p>
+            <b>Selected courses:</b>
+            {{#each courses}}{{#unless @first }}, {{/unless}}{{.}}{{/each}}
+        </p>
+        {{/if}}
+        {{#if score}}
+            <b>Final grade: {{grade}}, Courses average grade: {{score}}</b>
+        {{/if}}
+    </div>
+    {{/each}}
+</div>
+{{/if}}

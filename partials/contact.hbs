@@ -1,0 +1,39 @@
+{{#resume.basics}}
+<h4>Contact</h4>
+<ul class='contact-list'>
+{{#if website }}
+<li>
+    <i class="fa-solid fa-laptop-code"></i>
+    <a href='https://{{website}}' target='_blank'>{{website}}</a>
+</li>
+{{/if}}
+
+{{#if phone }}
+<li>
+    <i class="fa-regular fa-message"></i>
+    <a href='tel:{{phone}}' target='_blank'>{{phone}}</a>
+</li>
+{{/if}}
+
+{{#if email }}
+<li>
+    <i class="fa-solid fa-envelope"></i>
+    <a href='mailto:{{email}}' target='_blank'>{{email}}</a>
+</li>
+{{/if}}
+
+{{#if profiles.length }}
+{{#each profiles}}
+<li>
+    {{#if image }}
+    <img src="{{ image }}" style="width: 1cm;margin:0.1cm"/>
+    {{ else }}
+    <i class="{{ icon }}"></i>
+    {{/if}}
+    <a href="https://{{url}}">{{url}}</a>
+</li>
+{{/each}}
+{{/if}}
+
+</ul>
+{{/resume.basics}}

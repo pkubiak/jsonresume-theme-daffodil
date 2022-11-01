@@ -1,0 +1,9 @@
+{{#if resume.skills }}
+    <h4 class='mt-5'>Skills</h4>
+    {{#each resume.skills}}
+        <h6 style='font-weight: bold'>{{name}}</h6>
+        <p>
+        {{#each keywords}}{{#unless @first }}, {{/unless}}{{.}}{{/each}}
+        </p>
+    {{/each}}
+{{/if}}

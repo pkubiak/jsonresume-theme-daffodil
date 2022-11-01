@@ -1,0 +1,22 @@
+{{#if resume.projects}}
+<div class='block'>
+    <h2><i class="fa-solid fa-briefcase"></i> Projects</h2>
+    {{#each resume.projects }}
+    <div class='item'>
+        <h3 class='icon-right-open-mini'>
+            <i class="fa-solid fa-chevron-right fa-sm"></i>
+            <em>{{name}}</em>
+            <span>{{ dateFormat "MMM YYYY" startDate }}{{#if endDate}} – {{ dateFormat "MMM YYYY" endDate }}{{/if}}</span>
+        </h3>
+        <h4>
+            {{ type }}<i class='slash'></i>{{ entity }}
+        </h4>
+        <p>{{description}}</p>
+        <i class="fa-solid fa-tags d-inline mx-1"></i>
+        <ul class="icon-tag d-inline">
+            {{#each keywords}}<li>{{.}}</li>{{/each}}
+        </ul>
+    </div>
+    {{/each}}
+</div>
+{{/if}}

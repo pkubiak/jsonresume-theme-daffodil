@@ -1,0 +1,15 @@
+{{#if resume.awards }}
+<div class='block'>
+    <h2><i class="fa-solid fa-trophy"></i> Achievements</h2>
+    {{#each resume.awards}}
+    <div class='item mt-1'>
+        <h3 class='icon-right-open-mini' style='border-bottom: 0; margin-bottom: 1mm'>
+            <i class="fa-solid fa-chevron-right fa-sm"></i>
+            <em>{{ title }}</em>
+        </h3>
+        <h4>{{#if summary }}
+            {{#if url}}<a href="{{url}}">{{ summary }}</a>{{else}}{{ summary }}{{/if}}, {{/if}}{{#if date }}{{ dateFormat "MMM YYYY" date }}{{/if}}</h4>
+    </div>
+    {{/each}}
+</div>
+{{/if}}

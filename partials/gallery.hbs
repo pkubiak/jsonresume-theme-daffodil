@@ -1,0 +1,8 @@
+{{#if resume.gallery }}
+    {{#each resume.gallery}}
+    <figure>
+        <img src="{{ image }}">
+        <figcaption>{{ label }}</figcaption>
+    </figure>
+    {{/each}}
+{{/if}}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito:300,400,500,600,700,800,900&amp;amp;subset=latin-ext' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <title>{{#resume.basics}}Resume of {{name}}{{/resume.basics}}</title>
+
+        <style>{{{css}}}</style>
+	</head>
+	<body>
+	
+	<div class="resume">
+        <header>
+        {{#resume.basics}} 
+            <h2>
+                {{name}}
+                <small>
+                    {{label}}
+                    <i class='slash'></i>
+                    {{location.city}}
+                </small>
+            </h2>
+            <div class='portrait'>
+                <img alt='{{name}} - portrait' src='{{picture}}'>
+            </div>
+            {{#if summary }}<p class='description'>{{summary}}</p>{{/if}}
+        {{/resume.basics}}
+        </header>
+
+        <main class='d-flex'>
+            <div class='left-column'>
+                {{> contact }}
+                {{> skills }}
+                {{> interests }}
+                {{> languages }}
+                {{> gallery }}
+            </div>
+
+            <div class='right-column'>
+                {{> awards }}
+
+                {{> work }}
+                {{> references }}
+
+                {{> education }}
+
+                {{> projects }}
+                {{!--
+                    {{> volunteer }}
+                    {{> publications }}
+                --}}
+            </div>
+        </main>
+
+        <footer>
+            I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the Personal Data Protection Act as of 29 August 1997, consolidated text: Journal of Laws 2016, item 922 as amended.
+        </footer>
+    </div>
+	</body>
+</html>

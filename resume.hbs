@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
@@ -29,7 +29,7 @@
             <div class='portrait'>
                 <img alt='{{name}} - portrait' src='{{picture}}'>
             </div>
-            {{#if summary }}<p class='description'>{{summary}}</p>{{/if}}
+            {{#if summary }}<p class='description'>{{{summary}}}</p>{{/if}}
         {{/resume.basics}}
         </header>
 
@@ -51,15 +51,11 @@
                 {{> education }}
 
                 {{> projects }}
-                {{!--
-                    {{> volunteer }}
-                    {{> publications }}
-                --}}
             </div>
         </main>
 
         <footer>
-            I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the Personal Data Protection Act as of 29 August 1997, consolidated text: Journal of Laws 2016, item 922 as amended.
+            {{#if resume.footer}}{{resume.footer}}{{/if}}
         </footer>
     </div>
 	</body>

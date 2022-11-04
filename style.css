@@ -50,8 +50,8 @@ div.resume {
 
 .item {
 	position: relative;
-	page-break-inside: avoid;
-	page-break-before: auto;
+	/* page-break-inside: avoid;
+	page-break-before: auto; */
 }
 
 .item h3 {
@@ -95,6 +95,8 @@ div.resume {
 
 .item p {
 	margin-bottom: 4px;
+	text-align: justify;
+	hyphens: auto;;
 }
 
 .item ul.icon-tag {
@@ -102,6 +104,14 @@ div.resume {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
+}
+
+ul.d-inline {
+	padding:0;
+	margin: 0;
+}
+ul.d-inline li{
+	display: inline;
 }
 
 .item ul.icon-tag li {
@@ -294,4 +304,21 @@ figure img {
 	a {
 		text-decoration: none !important;
 	}
+}
+
+
+ul {
+	padding-left: 30px;
+}
+
+h1, h2, h3, h4 {
+	margin-bottom: 0.3rem;
+}
+
+figcaption {
+	padding: 0.3rem;
+}
+
+footer {
+	font-size: 7pt;
 }

@@ -12,10 +12,12 @@
             {{ type }}<i class='slash'></i>{{ entity }}
         </h4>
         <p>{{description}}</p>
-        <i class="fa-solid fa-tags d-inline mx-1"></i>
-        <ul class="icon-tag d-inline">
-            {{#each keywords}}<li>{{.}}</li>{{/each}}
-        </ul>
+        {{#if keywords }}
+            <i class="fa-solid fa-tags d-inline mx-1"></i>
+            <ul class="icon-tag d-inline">
+                {{#each keywords}}<li>{{.}}</li>{{/each}}
+            </ul>
+        {{/if}}
     </div>
     {{/each}}
 </div>
